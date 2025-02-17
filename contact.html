@@ -71,7 +71,7 @@
             <!-- ======= Breadcrumbs ======= -->
             <div
                 class="breadcrumbs d-flex align-items-center"
-                style="background-image: url('assets/img/breadcrumbs-bg.jpg')"
+                style="background-image: url('assets/img/hero-carousel/02.jpg')"
             >
                 <div
                     class="container position-relative d-flex flex-column align-items-center"
@@ -110,7 +110,7 @@
                             >
                                 <i class="bi bi-envelope"></i>
                                 <h3>Email Us</h3>
-                                <p>contact@example.com</p>
+                                <p>eastwestbeachresorts@gmail.com</p>
                             </div>
                         </div>
                         <!-- End Info Item -->
@@ -141,12 +141,7 @@
                         <!-- End Google Maps -->
 
                         <div class="col-lg-6">
-                            <form
-                                action="forms/contact.php"
-                                method="post"
-                                role="form"
-                                class="php-email-form"
-                            >
+                            <form id="contactForm" class="php-email-form">
                                 <div class="row gy-4">
                                     <div class="col-lg-6 form-group">
                                         <input
@@ -291,6 +286,24 @@
         </footer>
         <!-- End Footer -->
 
+        <a
+            href="https://api.whatsapp.com/send?phone=917208780425&text= Hi, I would like to know more about your services!"
+            target="_blank"
+            style="position: fixed; bottom: 90px; right: 30px; height: 48px; width: 48px"
+        >
+            <img
+                src="/assets/img/logo/whatsapp.png"
+                style="
+                    position: fixed;
+                    bottom: 70px;
+                    right: 10px;
+                    height: 48px;
+                    width: 48px;
+                    object-fit: cover;
+                "
+            />
+        </a>
+
         <a href="#" class="scroll-top d-flex align-items-center justify-content-center"
             ><i class="bi bi-arrow-up-short"></i
         ></a>
@@ -304,9 +317,117 @@
         <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
         <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
         <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-        <script src="assets/vendor/php-email-form/validate.js"></script>
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $('#contactForm').on('submit', function (e) {
+                    e.preventDefault(); // Prevent the form from submitting the traditional way
+
+                    const fields = ['name', 'email', 'subject', 'message'];
+
+                    let isValid = true; // Flag to track validation status
+
+                    // Loop through fields to validate them
+                    fields.forEach((fieldId) => {
+                        const field = $(`#${fieldId}`);
+                        const value = field.val().trim();
+
+                        if (!value) {
+                            isValid = false;
+                            field.css('border-color', 'red'); // Highlight invalid fields
+                            field.next('.error-message').text('This field is required').show();
+                        } else if (
+                            fieldId === 'email' &&
+                            !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)
+                        ) {
+                            isValid = false;
+                            field.css('border-color', 'red'); // Highlight invalid fields
+                            field.next('.error-message').text('Enter a valid email address').show();
+                        } else {
+                            field.css('border-color', 'green'); // Mark valid fields
+                            field.next('.error-message').hide();
+                        }
+                    });
+
+                    // If validation fails, stop submission
+                    if (!isValid) return;
+
+                    // Define the submit button and loading spinner
+                    const rsubmitButton = document.getElementById('rs-btn');
+                    const rloadingButton = document.getElementById('rloading');
+                    const toast = document.getElementById('toast');
+
+                    // Show the loading spinner and hide the submit button
+                    if (rsubmitButton) rsubmitButton.style.display = 'none';
+                    if (rloadingButton) rloadingButton.style.display = 'block';
+                    const formData = {
+                        name: $('#name').val(),
+                        email: $('#email').val(),
+                        subject: $('#subject').val(),
+                        message: $('#message').val(),
+                    };
+                    return console.log('🚀 ~ formData:', formData);
+                    // Perform the AJAX request
+                    $.ajax({
+                        url: 'https://script.google.com/macros/s/AKfycbxkCT6cnJQrA37uFylMrcGEGlvuX-07EHMQPF0YY6UAknmlZtnYr1d3XBuDRSLVM6Dddw/exec',
+                        data: formData,
+                        method: 'post',
+                        success: function (response) {
+                            $('#contactForm')[0].reset(); // Reset form fields
+                            if (toast) {
+                                toast.classList.add('show');
+                                toast.textContent =
+                                    'Referral submitted successfully, thank you for your referral!';
+                                setTimeout(function () {
+                                    toast.classList.remove('show');
+                                }, 3000);
+                            }
+
+                            // Show the submit button again and hide the loading spinner
+                            if (rsubmitButton) rsubmitButton.style.display = 'block';
+                            if (rloadingButton) rloadingButton.style.display = 'none';
+
+                            // Reset field styles
+                            fields.forEach((fieldId) => {
+                                $(`#${fieldId}`).css('border-color', '');
+                            });
+                        },
+                        error: function (err) {
+                            // Hide loading spinner and show error message
+                            if (rloadingButton) rloadingButton.style.display = 'none';
+                            if (toast) {
+                                toast.classList.add('show');
+                                toast.style.backgroundColor = '#dc3545'; // Red for error
+                                toast.textContent = 'Something went wrong. Please try again.';
+                                setTimeout(function () {
+                                    toast.classList.remove('show');
+                                }, 3000);
+                            }
+
+                            // Show the submit button again
+                            if (rsubmitButton) rsubmitButton.style.display = 'block';
+                        },
+                    });
+                });
+
+                // Attach live validation on input focus and typing
+                const fields = ['name', 'email', 'subject', 'message'];
+                fields.forEach((fieldId) => {
+                    $(`#${fieldId}`).on('input focus', function () {
+                        const value = $(this).val().trim();
+                        if (value) {
+                            $(this).css('border-color', 'green');
+                            $(this).next('.error-message').hide();
+                        } else {
+                            $(this).css('border-color', 'red');
+                            $(this).next('.error-message').text('This field is required').show();
+                        }
+                    });
+                });
+            });
+        </script>
     </body>
 </html>
