@@ -1,6 +1,6 @@
 /**
-* Template Name: East West Beach Resortss  - v1.3.0
-* Template URL: https://bootstrapmade.com/East West Beach Resortss -bootstrap-construction-website-template/
+* Template Name: East West Beach Resorts  - v1.3.0
+* Template URL: https://bootstrapmade.com/East West Beach Resorts -bootstrap-construction-website-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -18,12 +18,15 @@
     --font-secondary: "Inter", sans-serif;
 }
 
-    /* Colors */
+/* Colors */
+:root {
     --color-default: #364d59;
     --color-primary: #feb900;
     --color-secondary: #52565e;
+}
 
-    /* Smooth scroll behavior */
+/* Smooth scroll behavior */
+:root {
     scroll-behavior: smooth;
 }
 
@@ -176,7 +179,7 @@ section {
     background: var(--color-primary);
     width: 40px;
     height: 40px;
-    border-radius: 50px;
+    border-radius: 4px;
     transition: all 0.4s;
 }
 
@@ -542,61 +545,6 @@ section {
 /*--------------------------------------------------------------
 # Get Started Section
 --------------------------------------------------------------*/
-.gallery {
-    max-width: 1200px;
-    margin: 0 auto;
-    column-count: 4;
-    font-family: arial;
-}
-.gallery-item {
-    break-inside: avoid;
-    margin-bottom: 16px;
-}
-.gallery-item figure {
-    margin: 0;
-    position: relative;
-}
-.gallery-item figcaption {
-    font-style: italic;
-    padding: 8px;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    box-sizing: border-box;
-    bottom: 3px;
-    color: #fff;
-    height: 30px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    border-radius: 0 0 14px 14px;
-}
-.gallery-item img {
-    width: 100%;
-    border-radius: 14px;
-}
-.gallery-item p {
-    margin: 0;
-    padding: 8px;
-}
-
-@media screen and (max-width: 500px) {
-    .gallery {
-        column-count: 1;
-    }
-}
-@media screen and (min-width: 501px) and (max-width: 700px) {
-    .gallery {
-        column-count: 2;
-    }
-}
-@media screen and (min-width: 701px) and (max-width: 900px) {
-    .gallery {
-        column-count: 3;
-    }
-}
-
-
 .get-started .content {
     padding: 30px 0;
 }
