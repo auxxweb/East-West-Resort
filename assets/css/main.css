@@ -10,13 +10,13 @@
 # Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 --------------------------------------------------------------*/
 /* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
-    /* Font settings */
-    --font-default: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', 
-        Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-primary: 'Playfair Display', serif;
-    --font-secondary: 'Lato', sans-serif;
+    --font-default: "Inter", sans-serif;
+    --font-primary: "Cinzel", serif;
+    --font-secondary: "Inter", sans-serif;
+}
 
     /* Colors */
     --color-default: #364d59;
