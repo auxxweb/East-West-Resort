@@ -4,7 +4,7 @@
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-        <title>East West Beach Resorts - About</title>
+        <title>East West Beach Resorts - Service</title>
         <meta content="" name="description" />
         <meta content="" name="keywords" />
 
@@ -46,7 +46,6 @@
                 class="container-fluid container-xl d-flex align-items-center justify-content-between"
             >
                 <a href="index.html" class="logo d-flex align-items-center">
-                    <!-- Uncomment the line below if you also wish to use an image logo -->
                     <img src="assets/img/logo/logo.png" alt="" />
                     <h1>East West Beach Resorts</h1>
                 </a>
@@ -56,7 +55,7 @@
                 <nav id="navbar" class="navbar">
                     <ul>
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html" class="active">About</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="packages.html">Packages</a></li>
@@ -67,8 +66,8 @@
                             ></a>
                             <ul>
                                 <li><a href="location-varkala.html">Varkala</a></li>
-                                <li><a href="location-varkala.html">Wayanad</a></li>
-                                <li><a href="location-varkala.html">Kashmir</a></li>
+                                <li><a href="location-wayanad.html">Wayanad</a></li>
+                                <li><a href="location-kashmir.html">Kashmir</a></li>
                             </ul>
                         </li>
                         <li><a href="contact.html">Contact</a></li>
@@ -89,67 +88,75 @@
                     class="container position-relative d-flex flex-column align-items-center"
                     data-aos="fade"
                 >
-                    <h2>About</h2>
+                    <h2>Services</h2>
                     <ol>
                         <li><a href="index.html">Home</a></li>
-                        <li>About</li>
+                        <li>Services</li>
                     </ol>
                 </div>
             </div>
             <!-- End Breadcrumbs -->
-
-            <!-- ======= About Section ======= -->
-            <section id="about" class="about">
-                <div class="container" data-aos="fade-up">
-                    <div class="row position-relative">
-                        <div
-                            class="col-lg-7 about-img"
-                            style="background-image: url(assets/img/cards/02.jpg)"
-                        ></div>
-
-                        <div class="col-lg-7">
-                            <h2>About Us</h2>
-                            <div class="our-story">
-                                <h4>Est 2020</h4>
-                                <h3>Our Story</h3>
+            <!-- ======= Package Details Section ======= -->
+            <section id="service-details" class="service-details">
+                <div class="container" data-aos="fade-up" data-aos-delay="100">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div
+                                style="
+                                    padding: 1.5rem;
+                                    background-color: #f8f9fa;
+                                    border-radius: 5px;
+                                "
+                            >
+                                <h3>Water Sports Adventures</h3>
                                 <p>
-                                    At East West Beach Cliff Resort, we redefine beachside luxury
-                                    with a tranquil atmosphere, premium accommodations, and
-                                    delightful dining experiences. Conveniently situated in Edava,
-                                    Varkala, our resort provides easy access to stunning beaches,
-                                    cultural landmarks, and vibrant local markets. Whether you're a
-                                    solo traveler, a couple, or a family, we have everything you
-                                    need for an unforgettable stay.
+                                    Experience the thrill of the ocean with an array of exciting
+                                    water sports. Whether you're a beginner or a pro, our
+                                    professional guides ensure a fun and safe adventure.
                                 </p>
                                 <ul>
                                     <li>
                                         <i class="bi bi-check-circle"></i>
-                                        <span>Prime Beachfront Location</span>
+                                        <span>Jet Skiing</span>
                                     </li>
                                     <li>
                                         <i class="bi bi-check-circle"></i>
-                                        <span>Proximity to Attractions</span>
+                                        <span>Snorkeling</span>
                                     </li>
                                     <li>
                                         <i class="bi bi-check-circle"></i>
-                                        <span>Authentic Kerala Hospitality</span>
+                                        <span>Banana Boat Rides</span>
                                     </li>
                                     <li>
                                         <i class="bi bi-check-circle"></i>
-                                        <span>Free Parking & Easy Accessibility</span>
+                                        <span>Kayaking & Paddleboarding</span>
+                                    </li>
+                                    <li>
+                                        <i class="bi bi-check-circle"></i>
+                                        <span>Safety Ensured</span>
                                     </li>
                                 </ul>
                                 <p>
-                                    Whether you're seeking adventure or relaxation, East West Beach
-                                    Cliff Resort promises a rejuvenating escape amidst nature's
-                                    beauty. Book your stay today and experience the best of Varkala!
+                                    Unleash your adventurous spirit and dive into the excitement.
+                                    Whether you prefer high-speed thrills or a relaxing ride, our
+                                    water sports activities promise unforgettable memories.
                                 </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8">
+                            <div id="service-content-remodeling" class="service-content active">
+                                <img
+                                    src="assets/img/cards/1D.png"
+                                    alt="Remodeling Services"
+                                    class="img-fluid services-img"
+                                />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <!-- End About Section -->
+            <!-- End Package Details Section -->
         </main>
         <!-- End #main -->
 
@@ -267,8 +274,124 @@
         <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
         <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
         <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
 
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                // Get all service links
+                const serviceLinks = document.querySelectorAll('.services-list a');
+
+                // Add click event to each service link
+                serviceLinks.forEach((link) => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+
+                        // Remove active class from all links
+                        serviceLinks.forEach((item) => {
+                            item.classList.remove('active');
+                        });
+
+                        // Add active class to clicked link
+                        this.classList.add('active');
+
+                        // Get service type from data attribute
+                        const serviceType = this.getAttribute('data-service');
+
+                        // Hide all service content
+                        document.querySelectorAll('.service-content').forEach((content) => {
+                            content.classList.remove('active');
+                        });
+
+                        // Show selected service content
+                        document
+                            .getElementById('service-content-' + serviceType)
+                            .classList.add('active');
+
+                        // Update sidebar content based on service
+                        updateSidebarContent(serviceType);
+                    });
+                });
+
+                // Function to update sidebar content
+                function updateSidebarContent(serviceType) {
+                    const sidebarContent = document.getElementById('service-sidebar-content');
+
+                    // Update content based on service type
+                    switch (serviceType) {
+                        case 'remodeling':
+                            sidebarContent.innerHTML = `
+                                <h4>Weekend Beach Escape</h4>
+                                <p>
+                                    Short on time but need a refreshing break? Our Weekend Beach Escape offers the perfect quick getaway. This compact package includes comfortable garden-view accommodation, complimentary welcome cocktails, beach loungers and umbrella reservation, and a breakfast buffet. Enjoy a 30-minute foot massage to help you unwind quickly and make the most of your brief stay.
+                                </p>
+                            `;
+                            break;
+                        case 'construction':
+                            sidebarContent.innerHTML = `
+                                <h4>Culinary Coastal Experience</h4>
+                                <p>
+                                    Tantalize your taste buds with our Culinary Coastal Experience, designed for food enthusiasts. Stay in our elegant sea-view rooms and enjoy priority reservations at our signature restaurant. The package includes a hands-on cooking class with our executive chef focusing on seafood specialties and local cuisine, a guided tour of the local fish market with our chef followed by a personalized lunch preparation, and a private wine and seafood pairing dinner. Each morning begins with an expanded gourmet breakfast featuring local delicacies. A recipe booklet is provided as a souvenir to recreate the flavors at home.
+                                </p>
+                            `;
+                            break;
+                        case 'product-management':
+                            sidebarContent.innerHTML = `
+                                <h4>Wellness & Waves Retreat</h4>
+                                <p>
+                                   Rejuvenate your body and mind with our comprehensive Wellness & Waves Retreat. This holistic package includes beachfront accommodation with daily housekeeping and turndown service. Begin each day with guided meditation sessions on the beach, followed by nutritionist-designed breakfast options. Enjoy two Ayurvedic spa treatments, daily yoga classes, and personalized wellness consultations. The package includes healthy cooking demonstrations using local ingredients, guided nature walks, and access to our fitness center. A digital detox welcome kit helps you disconnect and focus on wellbeing.
+                                </p>
+                            `;
+                            break;
+                        case 'repairs':
+                            sidebarContent.innerHTML = `
+                                <h4>Reliable Repair Services</h4>
+                                <p>
+                                    Our repair services address problems quickly and effectively. From emergency repairs to scheduled
+                                    maintenance, we have the expertise to restore your property's condition with minimal disruption.
+                                </p>
+                            `;
+                            break;
+                        case 'design':
+                            sidebarContent.innerHTML = `
+                                <h4>Innovative Design Solutions</h4>
+                                <p>
+                                    Our design services blend creativity with functionality to create spaces that inspire.
+                                    Whether residential or commercial, we develop designs that perfectly balance aesthetics,
+                                    practicality, and your unique vision.
+                                </p>
+                            `;
+                            break;
+                    }
+                }
+            });
+        </script>
+
+        <style>
+            .service-content {
+                display: none;
+            }
+
+            .service-content.active {
+                display: block;
+            }
+
+            .services-list a {
+                transition: all 0.3s ease;
+            }
+
+            .services-list a:hover {
+                padding-left: 15px;
+            }
+
+            #service-sidebar-content {
+                margin-top: 2rem;
+                padding: 1.5rem;
+                background-color: #f8f9fa;
+                border-radius: 5px;
+            }
+        </style>
     </body>
 </html>
