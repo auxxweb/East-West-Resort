@@ -1,2 +1,2 @@
 Fully working PHP/AJAX contact form script is available in the pro version of the template.
-You can buy it from: https://bootstrapmade.com/East West Beach Resorts -bootstrap-construction-website-template/
+You can buy it from: https://bootstrapmade.com/East West Resorts -bootstrap-construction-website-template/

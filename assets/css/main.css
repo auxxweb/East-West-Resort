@@ -1,6 +1,6 @@
 /**
-* Template Name: East West Beach Resorts  - v1.3.0
-* Template URL: https://bootstrapmade.com/East West Beach Resorts -bootstrap-construction-website-template/
+* Template Name: East West Resorts  - v1.3.0
+* Template URL: https://bootstrapmade.com/East West Resorts -bootstrap-construction-website-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
@@ -14,9 +14,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 :root {
-    --font-default: "Inter", sans-serif;
-    --font-primary: "Lato", serif;
-    --font-secondary: "Inter", sans-serif;
+    --font-default: 'Inter', sans-serif;
+    --font-primary: 'Lato', serif;
+    --font-secondary: 'Inter', sans-serif;
 }
 
 /* Colors */
