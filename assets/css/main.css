@@ -10,12 +10,16 @@
 # Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 --------------------------------------------------------------*/
 /* Fonts */
-/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Elsie:wght@400;900&display=swap');
+
+@font-face {
+    font-family: 'chaviera';
+    src: url('../js/chaviera.otf');
+}
 
 :root {
     --font-default: 'Inter', sans-serif;
-    --font-primary: 'Lato', serif;
+    --font-primary: "chaviera", serif;
     --font-secondary: 'Inter', sans-serif;
 }
 
