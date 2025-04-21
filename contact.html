@@ -69,6 +69,7 @@
                                 <li><a href="location-varkala.html">Varkala</a></li>
                                 <li><a href="location-wayanad.html">Wayanad</a></li>
                                 <li><a href="location-kashmir.html">Kashmir</a></li>
+                                <li><a href="location-kashmir.html">Munnar</a></li>
                             </ul>
                         </li>
                         <li><a href="contact.html" class="active">Contact</a></li>
@@ -191,6 +192,7 @@
                                         class="form-control"
                                         name="message"
                                         rows="5"
+                                        id="message"
                                         placeholder="Message"
                                         required
                                     ></textarea>
@@ -323,6 +325,9 @@
         <div id="preloader"></div>
 
         <!-- Vendor JS Files -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
         <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
         <script src="assets/vendor/aos/aos.js"></script>
         <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
@@ -346,6 +351,7 @@
                     fields.forEach((fieldId) => {
                         const field = $(`#${fieldId}`);
                         const value = field.val().trim();
+                        console.log("🚀 ~ fields.forEach ~ field:", field)
 
                         if (!value) {
                             isValid = false;
